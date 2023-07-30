@@ -1,0 +1,79 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+#home-icon {
+  font-size: 4x;
+  color: rgb(168, 168, 168);
+  margin-left: 5px;
+}
+
+#home {
+  display: flex;
+  align-items: center;
+  color: rgb(168, 168, 168);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#home:hover {
+  color: gray;
+}
+
+h1 {
+  font-family: "Courier New", Courier, monospace;
+  color: palevioletred;
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  gap: 10px;
+  background-color: plum; /* Warna tema plum */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Gaya untuk tombol Start Game */
+#start-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: rgb(180, 132, 180); /* Warna tema plum */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#start-button:focus {
+  outline: none;
+}
+
+#start-button:hover {
+  background-color: rgb(174, 125, 174);
+}

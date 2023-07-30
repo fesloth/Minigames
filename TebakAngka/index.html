@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Permainan Tebak Angka</title>
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      .container {
+        max-width: 500px;
+        margin-top: 150px;
+      }
+
+      #home-icon {
+        font-size: 4x;
+        color: rgb(168, 168, 168);
+        margin-left: 5px;
+      }
+
+      #home {
+        display: flex;
+        align-items: center;
+        color: rgb(168, 168, 168);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      #home:hover {
+        color: gray;
+      }
+
+      .back {
+        display: flex;
+        justify-content: center;
+      }
+
+      .box {
+        margin-bottom: 10px;
+        width: 40px;
+        margin-right: 10px;
+      }
+
+      #boxes {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .guess::-webkit-outer-spin-button,
+      .guess::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      .guess[type="number"] {
+        -webkit-appearance: none;
+        -moz-appearance: textfield;
+        appearance: none;
+      }
+
+      footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+
+      .get {
+        display: flex;
+        justify-content: center;
+        padding: 2px 5px;
+      }
+
+      .get a {
+        padding: 4px;
+        font-size: large;
+      }
+
+      #posisi {
+        margin-bottom: 20px;
+      }
+
+      #github {
+        color: black;
+      }
+
+      #github:hover {
+        color: rgb(80, 77, 77);
+      }
+
+      #gitlab {
+        color: rgb(232, 54, 54);
+      }
+
+      #gitlab:hover {
+        color: rgb(183, 95, 95);
+      }
+
+      #instagram {
+        color: rgb(160, 71, 141);
+      }
+
+      #instagram:hover {
+        color: rgb(212, 146, 146);
+      }
+
+      #twitter:hover {
+        color: rgb(159, 171, 207);
+      }
+
+      #linkedin {
+        color: rgb(0, 55, 255);
+      }
+
+      #linkedin:hover {
+        color: rgb(130, 130, 234);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3 style="text-align: center">Permainan Tebak Angka</h3>
+      <p style="text-align: center">
+        Silahkan tulis tebakan Anda! <br />
+        Tebak angka dari 1 hingga 10 :
+      </p>
+      <div id="boxes">
+        <div class="box">
+          <input type="number" class="form-control guess" min="1" max="10" step="1" />
+        </div>
+        <div class="box">
+          <input type="number" class="form-control guess" min="1" max="10" step="1" />
+        </div>
+        <div class="box">
+          <input type="number" class="form-control guess" min="1" max="10" step="1" />
+        </div>
+        <div class="box">
+          <input type="number" class="form-control guess" min="1" max="10" step="1" />
+        </div>
+        <div class="box">
+          <input type="number" class="form-control guess" min="1" max="10" step="1" />
+        </div>
+        <div class="box">
+          <input type="number" class="form-control guess" min="1" max="10" step="1" />
+        </div>
+      </div>
+      <div id="posisi" class="text-center mt-4">
+        <button class="btn btn-primary" onclick="checkGuess()">Periksa</button>
+        <button class="btn btn-secondary" onclick="resetGame()">Reset Permainan</button>
+      </div>
+      <p id="result" style="margin-top: 20px; text-align: center"></p>
+      <div class="text-center" id="history"></div>
+    </div>
+    <footer>
+      <p>
+        created by <a style="text-decoration: none; color: green" href="whatsapp://send?phone=087816983631">Syahla <i class="fa-brands fa-whatsapp"></i></a>
+      </p>
+      <div class="get">
+        <a target="_blank" id="github" href="https://github.com/fesloth"><i class="fa-brands fa-github"></i></a>
+        <a target="_blank" id="gitlab" href="https://gitlab.com/fesloth"><i class="fa-brands fa-gitlab"></i></a>
+        <a target="_blank" id="instagram" href="https://instagram.com/syhl.crz"><i class="fa-brands fa-instagram"></i></a>
+        <a target="_blank" id="twitter" href="https://twitter.com/nielvoff"><i class="fa-brands fa-twitter"></i></a>
+        <a target="_blank" id="linkedin" href="https://www.linkedin.com/in/syahla-nur-azizah-3a8ab4270/"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </footer>
+    <div class="back">
+      <a id="home" href="../home.html" style="margin-top: 20px">
+        Kembali ke Beranda
+        <i id="home-icon" class="fas fa-home"></i>
+      </a>
+    </div>
+    <!-- Include Bootstrap CSS and JavaScript files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta3/css/bootstrap.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta3/js/bootstrap.min.js"></script>
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script src="script.js"></script>
+  </body>
+</html>

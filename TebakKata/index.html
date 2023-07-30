@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tebak Kata</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="setupPage">
+      <h1>Game Tebak Kata Pemrograman</h1>
+      <p>Pilih mode kesulitan:</p>
+      <button onclick="setupGame('easy')">Easy</button>
+      <button onclick="setupGame('medium')">Medium</button>
+      <button onclick="setupGame('hard')">Hard</button>
+    </div>
+
+    <div id="gamePage" style="display: none">
+      <h1>Game Tebak Kata Pemrograman</h1>
+      <p>Masukkan tebakan Anda di bawah ini:</p>
+      <input type="text" id="tebakanInput" onkeypress="handleKeyPress(event)" />
+      <button onclick="cekTebakan()">Cek Tebakan</button>
+      <button onclick="resetGame()">Reset Game</button>
+      <p id="hasilTebakan"></p>
+    </div>
+    <div class="back">
+      <a id="home" href="../home.html" style="margin-top: 20px">
+        Kembali ke Beranda
+        <i id="home-icon" class="fas fa-home"></i>
+      </a>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+  </body>
+</html>

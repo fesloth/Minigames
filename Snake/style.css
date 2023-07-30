@@ -1,0 +1,99 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #b5d1b6;
+}
+canvas {
+  border: 2px solid black;
+}
+#home-icon {
+  font-size: 4x;
+  color: rgb(168, 168, 168);
+  margin-left: 5px;
+}
+
+#home {
+  display: flex;
+  align-items: center;
+  color: rgb(168, 168, 168);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#home:hover {
+  color: gray;
+}
+
+.back {
+  display: flex;
+  justify-content: center;
+}
+.button-container {
+  margin-top: 5px;
+}
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 5px;
+}
+.button:hover {
+  background-color: #45a049;
+}
+
+.arrow-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-icon {
+  font-size: 24px;
+  padding: 5px;
+  margin: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+/* CSS to position the arrow icons on top and bottom */
+.arrow-top {
+  grid-row: 1;
+  grid-column: 1 / span 2;
+}
+
+.arrow-bottom {
+  grid-row: 3;
+  grid-column: 1 / span 2;
+}
+
+/* CSS to position the arrow icons on left and right */
+.arrow-left {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.arrow-right {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+#scoreIncrementText,
+.gameOverText {
+  font-size: 20px;
+  margin-top: 10px;
+  text-align: center;
+}

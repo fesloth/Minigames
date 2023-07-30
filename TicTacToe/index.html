@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      body {
+        background-color: cornsilk;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+
+      .boxes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(195, 187, 165);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+      }
+
+      .box a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .box i {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+
+      .box p {
+        margin-top: 0;
+        color: rgb(80, 77, 68);
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+        color: rgb(99, 93, 47);
+        font-size: 20px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
+      #bot {
+        color: rgb(174, 82, 82);
+      }
+
+      #bot:hover {
+        color: brown;
+      }
+
+      #player {
+        color: rgb(158, 81, 148);
+      }
+
+      #player:hover {
+        color: blueviolet;
+      }
+
+      #home-icon {
+        font-size: 4x;
+        color: rgb(168, 168, 168);
+        margin-left: 5px;
+      }
+
+      #home {
+        display: flex;
+        align-items: center;
+        color: rgb(168, 168, 168);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      #home:hover {
+        color: gray;
+      }
+
+      /* Aturan media query */
+      @media only screen and (max-width: 600px) {
+        .boxes {
+          flex-direction: column;
+        }
+        .box {
+          margin: 10px auto;
+        }
+        h1 {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Klik ikon untuk memilih jenis permainan</h1>
+      <div class="boxes">
+        <div class="box left-box">
+          <a href="bot/index.html">
+            <i id="bot" class="fas fa-robot"></i>
+            <p>Bermain dengan Bot</p>
+          </a>
+        </div>
+        <div class="box right-box">
+          <a href="battle/index.html" style="margin-top: 20px">
+            <i id="player" class="fa-solid fa-people-pulling"></i>
+            <p>
+              Bermain secara <br />
+              berpasangan!
+            </p>
+          </a>
+        </div>
+      </div>
+      <a id="home" href="../home.html" style="margin-top: 20px">
+        Kembali ke Beranda
+        <i id="home-icon" class="fas fa-home"></i>
+      </a>
+    </div>
+
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+  </body>
+</html>

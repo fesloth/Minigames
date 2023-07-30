@@ -1,0 +1,218 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #0a4c6a;
+}
+
+#home-icon {
+  font-size: 4x;
+  color: rgb(168, 168, 168);
+  margin-left: 5px;
+}
+
+#home {
+  display: flex;
+  align-items: center;
+  color: rgb(168, 168, 168);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#home:hover {
+  color: gray;
+}
+
+.back {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: #0a4c6a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Input teks */
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Area hasil tebakan */
+#hasilTebakan {
+  font-size: 18px;
+}
+
+/* Gaya untuk setupPage */
+#setupPage {
+  text-align: center;
+  padding: 30px;
+}
+
+/* Gaya untuk gamePage */
+#gamePage {
+  text-align: center;
+  padding: 30px;
+}
+
+footer {
+  background-color: #0a4c6a;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 25px;
+  transition: color 0.2s ease;
+}
+
+#github {
+  color: black;
+}
+
+#github:hover {
+  color: #333;
+}
+
+#gitlab {
+  color: rgb(176, 63, 6);
+}
+
+#gitlab:hover {
+  color: rgb(191, 169, 72);
+}
+
+#ig {
+  color: rgb(202, 63, 63);
+}
+
+#ig:hover {
+  color: pink;
+}
+
+#twt {
+  color: rgb(82, 190, 226);
+}
+
+#twt:hover {
+  color: lightblue;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  nav ul {
+    justify-content: flex-start;
+  }
+
+  nav li {
+    margin: 0 5px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .dropdown-content {
+    min-width: 120px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  input[type="text"] {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  #hasilTebakan {
+    font-size: 16px;
+  }
+
+  footer {
+    padding: 10px;
+  }
+
+  footer a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  header {
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  nav ul {
+    justify-content: flex-start;
+  }
+
+  nav li {
+    margin: 0 5px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .dropdown-content {
+    min-width: 120px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  input[type="text"] {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  #hasilTebakan {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  footer {
+    padding: 10px;
+  }
+
+  footer a {
+    font-size: 20px;
+  }
+}
