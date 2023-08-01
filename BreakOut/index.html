@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Breakout</title>
     <link rel="stylesheet" href="style.css" />
     <!-- Font Awesome CSS -->
@@ -10,7 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
-    <canvas id="gameCanvas" width="650" height="500"></canvas>
+    <canvas id="gameCanvas" width="645" height="500"></canvas>
+    <div class="arrow-icons">
+      <div class="arrow-icon" id="leftArrow"><i class="fas fa-arrow-left"></i></div>
+      <div class="arrow-icon" id="rightArrow"><i class="fas fa-arrow-right"></i></div>
+    </div>
+    <br />
     <button id="startButton" onclick="startGame()">Mulai Permainan</button>
     <div class="back">
       <a id="home" href="../home.html" style="margin-top: 20px">

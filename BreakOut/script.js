@@ -4,7 +4,7 @@ const ctx = canvas.getContext("2d");
 // Konstanta-konstanta game
 const PADDLE_WIDTH = 100;
 const PADDLE_HEIGHT = 10;
-const PADDLE_SPEED = 5;
+const PADDLE_SPEED = 7;
 const BALL_RADIUS = 10;
 const BALL_SPEED_X = 4;
 const BALL_SPEED_Y = 4;
@@ -127,6 +127,32 @@ document.addEventListener("keyup", (event) => {
     rightKeyPressed = false;
   } else if (event.key === "ArrowLeft") {
     leftKeyPressed = false;
+  }
+});
+
+// Function to handle left arrow click
+document.getElementById("leftArrow").addEventListener("click", function () {
+  if (paddleX > 0) {
+    paddleX -= PADDLE_SPEED;
+  }
+});
+
+// Function to handle right arrow click
+document.getElementById("rightArrow").addEventListener("click", function () {
+  if (paddleX + PADDLE_WIDTH < canvas.width) {
+    paddleX += PADDLE_SPEED;
+  }
+});
+
+document.getElementById("leftArrow").addEventListener("touchstart", function () {
+  if (paddleX > 0) {
+    paddleX -= PADDLE_SPEED;
+  }
+});
+
+document.getElementById("rightArrow").addEventListener("touchstart", function () {
+  if (paddleX + PADDLE_WIDTH < canvas.width) {
+    paddleX += PADDLE_SPEED;
   }
 });
 
